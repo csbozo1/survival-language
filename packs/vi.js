@@ -1,0 +1,106 @@
+// Vietnamese survival pack. Main text is Northern/standard; "south" is given only where
+// Ho Chi Minh City says or pronounces it differently.
+window.PACKS.vi = {
+  code: 'vi',
+  name: 'Vietnamese',
+  voiceLang: 'vi-VN',
+  hasTones: true,
+  categories: {
+    'Basics': 'lotus',
+    'Talking': 'buffalo',
+    'Getting around': 'motorbike',
+    'Food & drink': 'pho',
+    'Shopping': 'hat',
+    'Emergency': 'star'
+  },
+  phrases: [
+    // Basics
+    { id: 'hello', category: 'Basics', en: 'Hello', text: 'Xin chào', phonetic: 'sin chow',
+      tip: 'Safe with anyone. Warmer: "Chào anh" to a man a bit older than you, "Chào chị" to a woman a bit older, "Chào em" to someone younger.' },
+    { id: 'goodbye', category: 'Basics', en: 'Goodbye', text: 'Tạm biệt', phonetic: 'tahm byet',
+      tip: 'A little formal. In everyday life people often just say "Chào" again, or "bye".' },
+    { id: 'thank-you', category: 'Basics', en: 'Thank you', text: 'Cảm ơn', phonetic: 'gahm uhn',
+      tip: 'Add "nhiều" (nyew) for "thanks a lot": Cảm ơn nhiều.' },
+    { id: 'please', category: 'Basics', en: 'Please', text: 'Làm ơn', phonetic: 'lahm uhn',
+      tip: 'Used when asking a favour. When ordering, "Cho tôi…" (chaw toy, "give me…") is already polite.' },
+    { id: 'sorry', category: 'Basics', en: 'Sorry / Excuse me', text: 'Xin lỗi', phonetic: 'sin loy',
+      tip: 'Works both as an apology and to get someone\'s attention.' },
+    { id: 'yes', category: 'Basics', en: 'Yes', text: 'Vâng', phonetic: 'vuhng',
+      south: { text: 'Dạ', phonetic: 'yah' },
+      tip: '"Dạ" is polite everywhere; in Hanoi it is pronounced "zah".' },
+    { id: 'no', category: 'Basics', en: 'No', text: 'Không', phonetic: 'khohm',
+      tip: 'Rhymes with "home". It also means "not", and at the end of a sentence it turns it into a yes/no question.' },
+    { id: 'youre-welcome', category: 'Basics', en: 'You\'re welcome', text: 'Không có gì', phonetic: 'khohm kaw zee',
+      south: { text: 'Không có chi', phonetic: 'khohm kaw chee' },
+      tip: 'Literally "it\'s nothing".' },
+    { id: 'ok', category: 'Basics', en: 'OK / That works', text: 'Được', phonetic: 'duh-uhk',
+      tip: 'Means "can do". "Không được" means "that\'s not OK / can\'t".' },
+
+    // Talking
+    { id: 'dont-understand', category: 'Talking', en: 'I don\'t understand', text: 'Tôi không hiểu', phonetic: 'toy khohm hyew',
+      tip: '"Tôi" is a neutral "I" that is always safe for a visitor.' },
+    { id: 'speak-english', category: 'Talking', en: 'Do you speak English?', text: 'Bạn có nói tiếng Anh không?',
+      phonetic: 'bahn kaw noy tyeng aing khohm',
+      south: { phonetic: 'bahn kaw noy tyeng ahn khohm' },
+      tip: '"Tiếng Anh" is "English language". Swap in "tiếng Việt" for Vietnamese.' },
+    { id: 'my-name', category: 'Talking', en: 'My name is…', text: 'Tôi tên là…', phonetic: 'toy ten lah',
+      tip: 'Just add your name at the end.' },
+    { id: 'numbers-1-5', category: 'Talking', en: 'One, two, three, four, five', text: 'Một, hai, ba, bốn, năm',
+      phonetic: 'moht, hai, bah, bohn, nahm',
+      tip: 'Holding up fingers while you say them helps a lot.' },
+    { id: 'numbers-6-10', category: 'Talking', en: 'Six, seven, eight, nine, ten', text: 'Sáu, bảy, tám, chín, mười',
+      phonetic: 'sow, bay, tahm, cheen, moo-ee',
+      tip: 'Prices drop the thousands: "năm mươi" (fifty) usually means 50,000 dong.' },
+
+    // Getting around
+    { id: 'bathroom', category: 'Getting around', en: 'Where is the bathroom?', text: 'Nhà vệ sinh ở đâu?',
+      phonetic: 'nyah veh sing uh dow',
+      tip: '"WC" is also widely understood and is what most signs say.' },
+    { id: 'where-is', category: 'Getting around', en: 'Where is…?', text: '… ở đâu?', phonetic: 'uh dow',
+      tip: 'Say the place first: "Khách sạn ở đâu?" (kahk sahn, hotel).' },
+    { id: 'left', category: 'Getting around', en: 'Turn left', text: 'Rẽ trái', phonetic: 'zeh chai',
+      south: { text: 'Quẹo trái', phonetic: 'weh-ow chai' } },
+    { id: 'right', category: 'Getting around', en: 'Turn right', text: 'Rẽ phải', phonetic: 'zeh fai',
+      south: { text: 'Quẹo phải', phonetic: 'weh-ow fai' } },
+    { id: 'straight', category: 'Getting around', en: 'Go straight', text: 'Đi thẳng', phonetic: 'dee tahng' },
+    { id: 'stop-here', category: 'Getting around', en: 'Stop here', text: 'Dừng ở đây', phonetic: 'zuhng uh day',
+      south: { phonetic: 'yuhng uh day' },
+      tip: 'For taxis and motorbike rides. The letter "d" is "z" in the North and "y" in the South.' },
+
+    // Food & drink
+    { id: 'water', category: 'Food & drink', en: 'Water', text: 'Nước', phonetic: 'nuh-uhk',
+      tip: 'Ask for bottled water: "nước suối" (nuh-uhk soo-oy). Avoid tap water.' },
+    { id: 'coffee', category: 'Food & drink', en: 'Iced coffee with milk', text: 'Cà phê sữa đá', phonetic: 'kah feh soo-ah dah',
+      tip: 'Understood everywhere. In Hanoi the local name is "nâu đá" (now dah).' },
+    { id: 'delicious', category: 'Food & drink', en: 'Delicious!', text: 'Ngon quá!', phonetic: 'ngawn kwah',
+      south: { phonetic: 'ngawn wah' },
+      tip: '"Quá" means "so / too". Cooks love hearing this one.' },
+    { id: 'not-spicy', category: 'Food & drink', en: 'Not spicy', text: 'Không cay', phonetic: 'khohm kai',
+      tip: 'For a little heat instead: "ít cay" (it kai).' },
+    { id: 'bill', category: 'Food & drink', en: 'The bill, please', text: 'Tính tiền', phonetic: 'ting tyen',
+      tip: 'Call staff over first with "Em ơi!" (em uh-ee).' },
+    { id: 'cheers', category: 'Food & drink', en: 'Cheers! (one, two, three, go!)', text: 'Một, hai, ba, zô!', phonetic: 'moht, hai, bah, zo',
+      south: { text: 'Một, hai, ba, dô!', phonetic: 'moht, hai, bah, yo' },
+      tip: 'Shouted together before drinking. Expect to do it many times.' },
+
+    // Shopping
+    { id: 'how-much', category: 'Shopping', en: 'How much is it?', text: 'Bao nhiêu tiền?', phonetic: 'bow nyew tyen',
+      tip: 'Sellers often type the price on a phone or calculator for you.' },
+    { id: 'too-expensive', category: 'Shopping', en: 'Too expensive!', text: 'Đắt quá!', phonetic: 'daht kwah',
+      south: { text: 'Mắc quá!', phonetic: 'mahk wah' },
+      tip: 'Say it with a smile. Bargaining is expected at markets, not in shops with price tags.' },
+    { id: 'this-one', category: 'Shopping', en: 'This one', text: 'Cái này', phonetic: 'kai nai',
+      tip: 'Point and say it. Works for menus too.' },
+    { id: 'no-thanks', category: 'Shopping', en: 'No, thank you', text: 'Không, cảm ơn', phonetic: 'khohm, gahm uhn',
+      tip: 'For persistent sellers. Firmer: "Không cần" (khohm kun, "don\'t need it").' },
+
+    // Emergency
+    { id: 'help', category: 'Emergency', en: 'Help!', text: 'Cứu tôi với!', phonetic: 'kew toy voy',
+      tip: 'Emergency numbers: 113 police, 114 fire, 115 ambulance.' },
+    { id: 'doctor', category: 'Emergency', en: 'I need a doctor', text: 'Tôi cần bác sĩ', phonetic: 'toy kun bahk see' },
+    { id: 'hospital', category: 'Emergency', en: 'Hospital', text: 'Bệnh viện', phonetic: 'beng vyen',
+      tip: 'Combine with "ở đâu?" to ask where it is.' },
+    { id: 'lost', category: 'Emergency', en: 'I\'m lost', text: 'Tôi bị lạc', phonetic: 'toy bee lahk',
+      tip: 'Keep your hotel\'s address written in Vietnamese to show a driver.' }
+  ]
+};
