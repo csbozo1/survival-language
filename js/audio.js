@@ -18,8 +18,16 @@
   function voiceFor(lang) {
     const want = lang.toLowerCase();
     const norm = function (v) { return v.lang.replace('_', '-').toLowerCase(); };
-    return voices.find(function (v) { return norm(v) === want; }) ||
-      voices.find(function (v) { return norm(v).split('-')[0] === want.split('-')[0]; }) || null;
+    // Devices ship a small "compact" voice; a downloaded Premium or Enhanced one sounds far better.
+    const quality = function (v) {
+      const id = (v.name + ' ' + v.voiceURI).toLowerCase();
+      return id.includes('premium') ? 2 : id.includes('enhanced') ? 1 : 0;
+    };
+    const best = function (list) {
+      return list.sort(function (a, b) { return quality(b) - quality(a); })[0];
+    };
+    return best(voices.filter(function (v) { return norm(v) === want; })) ||
+      best(voices.filter(function (v) { return norm(v).split('-')[0] === want.split('-')[0]; })) || null;
   }
 
   if (synth) {
@@ -38,7 +46,7 @@
       const u = new SpeechSynthesisUtterance(text.replace(/…|\.\.\./g, ' ').trim());
       u.voice = v;
       u.lang = v.lang;
-      u.rate = slow ? 0.55 : 0.9;
+      u.rate = slow ? 0.7 : 1;
       synth.speak(u);
       return true;
     },
